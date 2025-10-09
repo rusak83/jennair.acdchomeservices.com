@@ -32,6 +32,122 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
 </head>
 <body class="wrapper">
+<!-- STICKY ACTION BUTTONS -->
+<style>
+.sticky-action-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sticky-btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    min-width: 140px;
+    text-align: center;
+}
+
+.sticky-btn-schedule {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.sticky-btn-schedule:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+}
+
+.sticky-btn-call {
+    background: white;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.sticky-btn-call:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+}
+
+/* Add top padding to body to compensate for fixed header */
+body.with-sticky-bar {
+    padding-top: 70px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .sticky-action-bar {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+    
+    .sticky-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        min-width: 120px;
+    }
+    
+    body.with-sticky-bar {
+        padding-top: 60px;
+    }
+}
+</style>
+
+<div class="sticky-action-bar">
+    <a href="#quote-form" class="sticky-btn sticky-btn-schedule" onclick="scrollToForm()">
+        📅 Schedule Repair
+    </a>
+    <a href="tel:+14697300301" class="sticky-btn sticky-btn-call" onclick="trackCall('sticky_button')">
+        📞 Call Now
+    </a>
+</div>
+
+<script>
+// Add padding class to body
+document.body.classList.add('with-sticky-bar');
+
+// Smooth scroll to form
+function scrollToForm() {
+    const form = document.getElementById('quickQuoteForm') || document.querySelector('form');
+    if (form) {
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Highlight the form briefly
+        form.style.border = '3px solid #007bff';
+        setTimeout(() => {
+            form.style.border = '';
+        }, 2000);
+    }
+}
+
+// Track call clicks
+function trackCall(source) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_call', {
+            event_category: 'engagement',
+            event_label: source
+        });
+    }
+}
+</script>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRWMRCGX"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -90,6 +206,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="col-8">
                     <hr>
                     <p class="pullquote">Your JennAir luxury appliances deserve expert care. So do you.</p>
+                    <!-- QUICK QUOTE FORM ANCHOR -->
+                    <div id="quote-form" style="background: #f8f9fa; border: 2px solid #007bff; border-radius: 10px; padding: 20px; margin: 25px 0; text-align: center;">
+                        <h3 style="color: #007bff; margin-bottom: 15px; font-size: 20px;">📅 Schedule Your JennAir Repair</h3>
+                        <form id="quickQuoteForm" style="max-width: 350px; margin: 0 auto;">
+                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+                            <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+                            <select style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+                                <option>Select Your JennAir Appliance</option>
+                                <option>Professional Range</option>
+                                <option>Induction Cooktop</option>
+                                <option>Built-in Oven</option>
+                                <option>Warming Drawer</option>
+                                <option>Refrigerator</option>
+                                <option>Other</option>
+                            </select>
+                            <button type="submit" style="background: linear-gradient(135deg, #007bff, #0056b3); color: white; border: none; padding: 12px 25px; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%;">📞 SCHEDULE REPAIR NOW</button>
+                        </form>
+                        <p style="font-size: 12px; color: #666; margin-top: 10px;">✅ No obligation • ✅ Free estimates • ✅ Same-day service available</p>
+                    </div>
 
 <p class="big">
 <p class="big">
