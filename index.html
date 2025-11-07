@@ -81,43 +81,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin:12px 0;
         }
 
-        .service-accordion__actions{
-            display:flex;
-            flex-wrap:wrap;
-            gap:12px;
-            margin-top:8px;
-        }
-
-        .service-accordion__cta{
-            padding:10px 20px;
-            border-radius:999px;
-            font-weight:600;
-            text-transform:none;
-        }
-
-        .service-accordion__cta--primary{
-            background-color:#dc3545;
-            color:#fff;
-        }
-
-        .service-accordion__cta--ghost{
-            border:1px solid #dc3545;
-            color:#dc3545;
-        }
-
         @media screen and (max-width: 640px){
             .service-accordion summary{
                 flex-direction:column;
                 align-items:flex-start;
-            }
-
-            .service-accordion__actions{
-                width:100%;
-            }
-
-            .service-accordion__cta{
-                width:100%;
-                text-align:center;
             }
         }
 
@@ -228,54 +195,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="fixed-width-container">
         <hr>
         <h2 class="section-headline">JennAir appliances we specialize in</h2>
-        <p class="big">Чтобы не путать клиентов лишними картинками, сделали короткий аккордеон: нажимаешь на строку — открывается описание, сразу понятно, что именно и зачем мы чиним.</p>
+        <p class="big">Tap any line below to expand the exact JennAir platform we work on. Quick descriptions + internal links keep things tidy without extra graphics.</p>
         <div class="service-accordion">
             <details open>
                 <summary>
                     <span>Column refrigerators &amp; freezers</span>
-                    <span class="service-accordion__hint">встроенные колонны JennAir</span>
+                    <span class="service-accordion__hint">JennAir built-in columns</span>
                 </summary>
-                <p class="big">Две отдельные колонны (холодильник + морозильник) с собственными компрессорами, датчиками и инверторными платами. Чаще всего выходим в Southlake, Westlake, Trophy Club — удерживаем температуру, меняем вентиляторы, датчики оттайки и петли тяжёлых фасадов.</p>
-                <div class="service-accordion__actions">
-                    <a class="service-accordion__cta service-accordion__cta--primary" href="https://book.housecallpro.com/book/ACDC-HVAC--Appliance-Repair/53312602f0a846a9b9e0059cfb118440?v2=true" rel="noopener">Записаться на диагностику</a>
-                    <a class="service-accordion__cta service-accordion__cta--ghost" href="#columns">Смотреть раздел ↓</a>
-                </div>
+                <p class="big">Independent refrigerator + freezer towers with dedicated compressors, thermistors, and inverter boards. We protect the investment by correcting temp drift, clearing iced drain pans, swapping evaporator fans, and rehanging heavy custom panels across Southlake, Westlake, and Trophy Club.</p>
+                <p class="small"><a href="#columns">Jump to the column repair section ↓</a></p>
             </details>
 
             <details>
                 <summary>
                     <span>RISE &amp; NOIR ranges</span>
-                    <span class="service-accordion__hint">фирменные плиты JennAir</span>
+                    <span class="service-accordion__hint">signature JennAir ranges</span>
                 </summary>
-                <p class="big">Премиальные газовые и dual-fuel плиты с двойными горелками, грилем, грилем/грилем и встроенными подъемными вытяжками. Устраняем обрывы проводки, ошибки 120V, чистим жиклёры и калибруем духовки до градуса, чтобы кухня продолжала работать как шоурум.</p>
-                <div class="service-accordion__actions">
-                    <a class="service-accordion__cta service-accordion__cta--primary" href="https://book.housecallpro.com/book/ACDC-HVAC--Appliance-Repair/53312602f0a846a9b9e0059cfb118440?v2=true" rel="noopener">Вызвать мастера</a>
-                    <a class="service-accordion__cta service-accordion__cta--ghost" href="#ranges">Смотреть раздел ↓</a>
-                </div>
+                <p class="big">Dual-stacked burners, chrome-infused griddles, integrated grills, and pop-up downdraft modules need precise calibration. We rebuild ignition harnesses, track down 120V fault codes, deep-clean jet plates, and recalibrate ovens so the kitchen still feels like a JennAir showroom.</p>
+                <p class="small"><a href="#ranges">Jump to the range repair section ↓</a></p>
             </details>
 
             <details>
                 <summary>
                     <span>Wall &amp; speed ovens</span>
-                    <span class="service-accordion__hint">настенные и speed-духовки</span>
+                    <span class="service-accordion__hint">stacked + speed oven suites</span>
                 </summary>
-                <p class="big">Двойные стеновые духовки, паровые и speed-комбайны серии RISE/NOIR. Чиним петли, уплотнители, вентиляторы охлаждения, меняем конвекционные/паровые элементы и перепрошиваем модули с ошибками F8E0/F6E4.</p>
-                <div class="service-accordion__actions">
-                    <a class="service-accordion__cta service-accordion__cta--primary" href="https://book.housecallpro.com/book/ACDC-HVAC--Appliance-Repair/53312602f0a846a9b9e0059cfb118440?v2=true" rel="noopener">Записаться</a>
-                    <a class="service-accordion__cta service-accordion__cta--ghost" href="#wall-ovens">Смотреть раздел ↓</a>
-                </div>
+                <p class="big">30&quot; doubles, steam-crisp combos, and speed ovens from the RISE/NOIR line. We replace hinges, gaskets, cooling blowers, convection/steam elements, and refresh UI boards when F8E0, F2E1, or F6E4 errors pop up.</p>
+                <p class="small"><a href="#wall-ovens">Jump to the wall oven section ↓</a></p>
             </details>
 
             <details>
                 <summary>
                     <span>Downdraft cooktops &amp; vents</span>
-                    <span class="service-accordion__hint">варочные панели с выдвижной вытяжкой</span>
+                    <span class="service-accordion__hint">island-friendly ventilation</span>
                 </summary>
-                <p class="big">Знаменитые JennAir downdraft системы для островных кухонь: поднимающийся вытяжной модуль и индукционные/газовые панели. Синхронизируем подъем, меняем моторы, фильтры, сенсорные панели и проверяем тягу по воздуховодам.</p>
-                <div class="service-accordion__actions">
-                    <a class="service-accordion__cta service-accordion__cta--primary" href="https://book.housecallpro.com/book/ACDC-HVAC--Appliance-Repair/53312602f0a846a9b9e0059cfb118440?v2=true" rel="noopener">Заказать сервис</a>
-                    <a class="service-accordion__cta service-accordion__cta--ghost" href="#downdraft">Смотреть раздел ↓</a>
-                </div>
+                <p class="big">JennAir practically invented telescoping downdraft for open kitchens. We synchronize lift timing, replace blower motors, refresh LED touch strips, and make sure the duct run is sealed so smoke and steam stay out of sightlines.</p>
+                <p class="small"><a href="#downdraft">Jump to the downdraft section ↓</a></p>
             </details>
         </div>
 
