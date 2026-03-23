@@ -1,0 +1,136 @@
+.shared-reviews-section {
+  padding: 16px 16px 40px;
+}
+
+.shared-reviews-card {
+  border: 1px solid #dbe3ff;
+  border-radius: 18px;
+  background: #fff;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.shared-reviews-section .section-headline,
+.shared-reviews-section h2 {
+  margin-bottom: 18px;
+}
+
+.nav-phone-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 10px 24px;
+  min-height: 44px;
+  border-radius: 999px;
+  background: #ff4050;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-phone-pill:hover {
+  color: #fff;
+  background: #e73346;
+}
+
+.shared-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e6e6e6;
+  backdrop-filter: blur(10px);
+}
+
+.shared-topbar .shared-topbar__inner {
+  max-width: 944px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.shared-topbar .shared-topbar__logo {
+  color: #001f92;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.05;
+}
+
+.shared-topbar .shared-topbar__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex: 1;
+}
+
+.shared-topbar .shared-topbar__nav a {
+  color: #001f92;
+  font-weight: 500;
+}
+
+.shared-topbar .shared-topbar__phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  min-height: 44px;
+  border-radius: 999px;
+  background: #ff4050;
+  color: #fff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.shared-topbar .shared-topbar__phone:hover {
+  color: #fff;
+  background: #e73346;
+}
+
+body.shared-header-offset {
+  padding-top: 76px;
+}
+
+body.has-injected-shared-header > header.site-header[role="banner"] {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav--container {
+    align-items: flex-start;
+  }
+
+  .nav-phone-pill {
+    margin-left: 0;
+    width: calc(100% - 32px);
+    margin: 8px 16px 0;
+    box-sizing: border-box;
+  }
+
+  .shared-topbar .shared-topbar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .shared-topbar .shared-topbar__nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .shared-topbar .shared-topbar__phone {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  body.shared-header-offset {
+    padding-top: 116px;
+  }
+}
